@@ -1,0 +1,10 @@
+# This file simulates a leaked Git configuration file.
+
+[core]
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+    logallrefupdates = true
+
+# Challenge 3: The following line contains a secret password.
+secretPassword = VerySecretPass123!
