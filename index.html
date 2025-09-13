@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fake CTF Challenges</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!-- Hidden credential for Challenge 1: base64 of "admin:SuperSecretPassword" is YWRtaW46U3VwZXJTZWNyZXRQYXNzd29yZA== -->
+</head>
+<body>
+  <header>
+    <h1>Fake CTF Challenges</h1>
+    <p>Welcome to a collection of safe, educational Capture‑the‑Flag–style challenges designed to help you learn about common security mistakes. Each section below describes a challenge where the goal is to find a leaked password or secret. These challenges are for training purposes only.</p>
+  </header>
+  <main>
+    <section id="challenge1">
+      <h2>1. Hidden in Comments</h2>
+      <p>
+        Explore the HTML source of this site and look for hidden comments. One of them contains a base64‑encoded string. Decode it to discover credentials like <code>user:SuperSecretPassword</code>.
+      </p>
+    </section>
+    <section id="challenge2">
+      <h2>2. Hard‑coded API Key</h2>
+      <p>
+        In a real‑world single‑page app, developers sometimes accidentally embed secrets in frontend code. Your task is to fetch the JavaScript bundle, inspect its contents and find the hard‑coded API key (e.g., <code>FAKE-API-KEY-1234</code>).
+      </p>
+    </section>
+    <section id="challenge3">
+      <h2>3. Exposed <code>.git</code> Directory</h2>
+      <p>
+        Many projects mistakenly deploy their version‑control metadata. If the <code>.git/</code> folder is public, you can reconstruct the repository and uncover sensitive files. Rebuild the repo, find the configuration file, and extract the password inside.
+      </p>
+    </section>
+    <section id="challenge4">
+      <h2>4. Open S3 Bucket Listing</h2>
+      <p>
+        Public cloud storage buckets should never contain confidential backups. In this challenge, you’re given a public directory listing. Find the backup ZIP file, extract the <code>.env</code> file, and read the <code>PASSWORD</code> environment variable.
+      </p>
+    </section>
+    <section id="challenge5">
+      <h2>5. Leaked Database with Weak Hashes</h2>
+      <p>
+        Download an intentionally weak database file containing MD5‑hashed passwords. Use a wordlist to crack the hashes. The password for the “admin” user is the flag.
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>
+      These challenges are designed for educational purposes and should only be run in a controlled environment. Do not use any techniques you learn here on systems you do not own or have permission to test.
+    </p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
